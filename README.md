@@ -11,7 +11,7 @@
 <br>
 
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge\&logo=github\&logoColor=white)](https://github.com/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-6D28D9?style=for-the-badge\&logo=linkedin\&logoColor=white)](https://www.linkedin.com/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-6D28D9?style=for-the-badge\&logo=linkedin\&logoColor=white)](https://www.linkedin.com/in/emily-nivea-ribeiro-da-silva-235ba9403?utm_source=share_via&utm_content=profile&utm_medium=member_android)
 [![Portfolio](https://img.shields.io/badge/Portfolio-8B5CF6?style=for-the-badge\&logo=google-chrome\&logoColor=white)](https://thenivea.netlify.app/)
 
 </div>
