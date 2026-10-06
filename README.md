@@ -82,16 +82,6 @@ Aplicação mobile voltada para **educação e descarte correto de resíduos**, 
 
 **Tecnologias:** Flutter • Dart • Geolocalização • Maps
 
----
-
-## GitHub
-
-<div align="center">
-
-<img height="170em" src="https://github-readme-stats.vercel.app/api?username=SEU_USUARIO&show_icons=true&theme=tokyonight&hide_border=true&title_color=8B5CF6&icon_color=A78BFA&text_color=C4B5FD&bg_color=0D1117"/>
-
-<img height="170em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=SEU_USUARIO&layout=compact&theme=tokyonight&hide_border=true&title_color=8B5CF6&text_color=C4B5FD&bg_color=0D1117"/>
-
 </div>
 
 ---
