@@ -177,15 +177,7 @@ Alguns começaram ainda durante o **Ensino Médio Técnico em Informática** e c
 
 ---
 
-## GitHub
 
-<div align="center">
-
-<img height="170em" src="https://github-readme-stats.vercel.app/api?username=sweetie-dev&show_icons=true&theme=midnight-purple&hide_border=true"/>
-
-<img height="170em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=sweetie-dev&layout=compact&theme=midnight-purple&hide_border=true"/>
-
-</div>
 
 ---
 
