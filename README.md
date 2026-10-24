@@ -118,6 +118,11 @@ console.log("Thanks for visiting my little universe!");
 
 `[ system message ]`
 
-*thank you for visiting. see you in the next commit ♡*
+<br>
+
+<div align="center">
+
+<img src="./footer.svg" width="100%" alt="Emily.exe - Goodbye Screen" />
 
 </div>
+
