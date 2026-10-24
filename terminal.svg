@@ -1,0 +1,37 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="425" viewBox="0 0 1000 425">
+<rect width="1000" height="425" rx="16" fill="#141021"/>
+<rect x="1" y="1" width="998" height="423" rx="16" fill="none" stroke="#604677"/>
+<path d="M16 1h968q15 0 15 15v35H1V16Q1 1 16 1z" fill="#342544"/>
+<circle cx="27" cy="26" r="7" fill="#E99BAE"/>
+<circle cx="50" cy="26" r="7" fill="#F1CE98"/>
+<circle cx="73" cy="26" r="7" fill="#A8D7BF"/>
+<text x="500" y="31" text-anchor="middle" font-family="monospace" font-size="16" fill="#E8D7F8">terminal — about_me.js</text>
+
+<g font-family="monospace" font-size="17">
+  <text x="42" y="96" fill="#A7E0C0">emily@midnight:~$</text>
+  <text x="252" y="96" fill="#E7D9F5">cat about_me.js</text>
+
+  <text x="42" y="141" fill="#A78AD1">const</text>
+  <text x="104" y="141" fill="#E9D9FA">emily = {</text>
+
+  <text x="75" y="178" fill="#E7A9D2">name:</text>
+  <text x="160" y="178" fill="#B4E2C9">"Emily Nivea",</text>
+
+  <text x="75" y="215" fill="#E7A9D2">role:</text>
+  <text x="160" y="215" fill="#B4E2C9">"Software Developer in progress",</text>
+
+  <text x="75" y="252" fill="#E7A9D2">education:</text>
+  <text x="200" y="252" fill="#B4E2C9">"Systems Analysis &amp; Development",</text>
+
+  <text x="75" y="289" fill="#E7A9D2">passion:</text>
+  <text x="180" y="289" fill="#B4E2C9">["front-end", "design", "creative coding"],</text>
+
+  <text x="75" y="326" fill="#E7A9D2">motto:</text>
+  <text x="160" y="326" fill="#B4E2C9">"turning ideas into experiences ♡"</text>
+
+  <text x="42" y="363" fill="#E9D9FA">};</text>
+  <text x="42" y="398" fill="#A7E0C0">emily@midnight:~$</text>
+  <rect x="250" y="382" width="10" height="19" fill="#D9B7FA"/>
+</g>
+</svg>
