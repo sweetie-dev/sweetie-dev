@@ -28,7 +28,7 @@
 
 | project | description | access |
 |:---|:---|:---:|
-| **S.I.G.A.** | Smart waste management and environmental solutions | [explore]((https://github.com/lidiatapajos/S.IG.A)) |
+| **S.I.G.A.** | Smart waste management and environmental solutions | [explore](https://github.com/lidiatapajos/S.IG.A) |
 | **Movies & Musics** | A universe for movie and music lovers | [explore](https://moviesandmusic.netlify.app) |
 | **NewBank** | Modern banking interface built with React | [repositories](https://github.com/sweetie-dev?tab=repositories) |
 | **Portfolio** | My creative corner on the web | [visit](https://thenivea.netlify.app) |
