@@ -1,54 +1,346 @@
 
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420" viewBox="0 0 1000 420">
-<rect width="1000" height="420" rx="16" fill="#171225"/>
-<rect x="1" y="1" width="998" height="418" rx="16" fill="none" stroke="#604677"/>
-<path d="M16 1h968q15 0 15 15v36H1V16Q1 1 16 1z" fill="#372748"/>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1000" height="420"
+     viewBox="0 0 1000 420"
+     role="img"
+     aria-label="Emily.exe animated project explorer">
+
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#171225"/>
+    <stop offset="100%" stop-color="#251735"/>
+  </linearGradient>
+
+  <radialGradient id="purpleGlow">
+    <stop offset="0%" stop-color="#A97BEB" stop-opacity=".27"/>
+    <stop offset="100%" stop-color="#A97BEB" stop-opacity="0"/>
+  </radialGradient>
+
+  <radialGradient id="pinkGlow">
+    <stop offset="0%" stop-color="#E99DCC" stop-opacity=".18"/>
+    <stop offset="100%" stop-color="#E99DCC" stop-opacity="0"/>
+  </radialGradient>
+
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+    <feDropShadow dx="0" dy="8" stdDeviation="10"
+                  flood-color="#080511" flood-opacity=".65"/>
+  </filter>
+
+  <clipPath id="windowClip">
+    <rect width="1000" height="420" rx="16"/>
+  </clipPath>
+
+  <style>
+    .ambient {
+      animation: ambientMove 9s ease-in-out infinite alternate;
+    }
+
+    @keyframes ambientMove {
+      from { transform: translate(-20px, 10px); }
+      to { transform: translate(35px, -15px); }
+    }
+
+    .ambient2 {
+      animation: ambientMove2 12s ease-in-out infinite alternate;
+    }
+
+    @keyframes ambientMove2 {
+      from { transform: translate(20px, -10px); }
+      to { transform: translate(-30px, 15px); }
+    }
+
+    .star {
+      animation: twinkle 3s ease-in-out infinite alternate;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    .s2 { animation-delay: -1s; }
+    .s3 { animation-delay: -2s; }
+
+    @keyframes twinkle {
+      from { opacity: .2; transform: scale(.6); }
+      to { opacity: .9; transform: scale(1.3); }
+    }
+
+    .card {
+      transform-box: fill-box;
+      transform-origin: center;
+      transition: transform .35s ease, filter .35s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-12px);
+      filter: drop-shadow(0 12px 12px #090514);
+    }
+
+    .card:hover .card-bg {
+      stroke: #DAB7FF;
+      stroke-width: 2;
+      fill: #362447;
+    }
+
+    .card:hover .folder {
+      transform: translateY(-5px) scale(1.06);
+    }
+
+    .folder {
+      transform-box: fill-box;
+      transform-origin: center;
+      transition: transform .35s ease;
+      animation: folderFloat 5s ease-in-out infinite alternate;
+    }
+
+    @keyframes folderFloat {
+      from { transform: translateY(0); }
+      to { transform: translateY(-5px); }
+    }
+
+    .card:nth-child(2) .folder { animation-delay: -1s; }
+    .card:nth-child(3) .folder { animation-delay: -2s; }
+    .card:nth-child(4) .folder { animation-delay: -3s; }
+
+    .status {
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .3; }
+    }
+
+    .cursor {
+      animation: blink 1s steps(1) infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    .scan {
+      animation: scanMove 10s linear infinite;
+    }
+
+    @keyframes scanMove {
+      from { transform: translateY(-420px); }
+      to { transform: translateY(420px); }
+    }
+
+    .pathGlow {
+      animation: glow 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { opacity: .35; }
+      to { opacity: 1; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+    }
+  </style>
+</defs>
+
+<!-- BACKGROUND -->
+<rect width="1000" height="420" rx="16" fill="url(#bg)"/>
+
+<g clip-path="url(#windowClip)">
+  <circle class="ambient" cx="740" cy="280" r="260"
+          fill="url(#purpleGlow)"/>
+  <circle class="ambient2" cx="350" cy="350" r="190"
+          fill="url(#pinkGlow)"/>
+
+  <g fill="#E9D0FF">
+    <circle class="star" cx="250" cy="130" r="1.5"/>
+    <circle class="star s2" cx="470" cy="100" r="1.5"/>
+    <circle class="star s3" cx="720" cy="135" r="2"/>
+    <circle class="star" cx="920" cy="90" r="1.5"/>
+    <circle class="star s2" cx="590" cy="385" r="1.5"/>
+  </g>
+</g>
+
+<!-- WINDOW FRAME -->
+<rect x="1" y="1" width="998" height="418"
+      rx="16" fill="none" stroke="#80609B"/>
+
+<path d="M16 1h968q15 0 15 15v36H1V16Q1 1 16 1z"
+      fill="#372748"/>
+
 <circle cx="27" cy="27" r="7" fill="#E99BAE"/>
 <circle cx="50" cy="27" r="7" fill="#F1CE98"/>
 <circle cx="73" cy="27" r="7" fill="#A8D7BF"/>
-<text x="500" y="32" text-anchor="middle" font-family="monospace" font-size="16" fill="#E9D8F9">file explorer — my_projects</text>
 
-<rect x="20" y="72" width="960" height="45" rx="9" fill="#292037"/>
-<text x="43" y="101" font-family="monospace" font-size="15" fill="#CEB7E8">⌂ / home / emily / projects /</text>
+<text x="500" y="32" text-anchor="middle"
+      font-family="monospace" font-size="16"
+      fill="#E9D8F9">
+  file explorer — my_projects
+</text>
 
-<!-- Sidebar -->
-<rect x="20" y="133" width="180" height="267" rx="10" fill="#21192F"/>
+<!-- ADDRESS BAR -->
+<rect x="20" y="72" width="960" height="45"
+      rx="9" fill="#292037" stroke="#4D385F"/>
+
+<text x="43" y="101"
+      font-family="monospace" font-size="15"
+      fill="#CEB7E8">
+  ⌂ / home / emily / projects /
+</text>
+
+<text class="pathGlow"
+      x="865" y="101"
+      font-family="monospace" font-size="12"
+      fill="#A8E4C1">
+  ● synced
+</text>
+
+<!-- SIDEBAR -->
+<rect x="20" y="133" width="180" height="267"
+      rx="10" fill="#21192F"/>
+
+<rect x="29" y="192" width="161" height="38"
+      rx="8" fill="#443057"/>
+
 <g font-family="monospace" font-size="15" fill="#CCB8E3">
   <text x="42" y="174">✦ Favorites</text>
-  <text x="42" y="217">▸ Projects</text>
+  <text x="42" y="217" fill="#F1DCFF">▸ Projects</text>
   <text x="42" y="260">▸ Portfolio</text>
   <text x="42" y="303">▸ Skills</text>
   <text x="42" y="346">♡ About me</text>
 </g>
 
-<!-- Project cards -->
+<!-- PROJECT CARDS -->
 <g font-family="monospace" text-anchor="middle">
-  <rect x="224" y="144" width="175" height="220" rx="14" fill="#292039" stroke="#634C80"/>
-  <path d="M272 198h33l10 10h42v49h-85z" fill="#C9A1F1"/>
-  <path d="M272 208h85v49h-85z" fill="#A77ED4"/>
-  <text x="311" y="292" fill="#F0DFFF" font-size="18" font-weight="bold">S.I.G.A.</text>
-  <text x="311" y="317" fill="#BDA9D5" font-size="12">Flutter / API</text>
-  <text x="311" y="339" fill="#A7D8BD" font-size="12">● project</text>
 
-  <rect x="414" y="144" width="175" height="220" rx="14" fill="#292039" stroke="#634C80"/>
-  <path d="M462 198h33l10 10h42v49h-85z" fill="#E6A5D0"/>
-  <path d="M462 208h85v49h-85z" fill="#CC8FBF"/>
-  <text x="501" y="292" fill="#F0DFFF" font-size="16" font-weight="bold">Movies &amp;</text>
-  <text x="501" y="312" fill="#F0DFFF" font-size="16" font-weight="bold">Musics</text>
-  <text x="501" y="339" fill="#BDA9D5" font-size="12">Web Development</text>
+  <!-- S.I.G.A. -->
+  <g class="card">
+    <rect class="card-bg"
+          x="224" y="144" width="175" height="220"
+          rx="14" fill="#292039" stroke="#634C80"/>
 
-  <rect x="604" y="144" width="175" height="220" rx="14" fill="#292039" stroke="#634C80"/>
-  <path d="M652 198h33l10 10h42v49h-85z" fill="#A9D6C2"/>
-  <path d="M652 208h85v49h-85z" fill="#7DB7A2"/>
-  <text x="691" y="292" fill="#F0DFFF" font-size="18" font-weight="bold">NewBank</text>
-  <text x="691" y="317" fill="#BDA9D5" font-size="12">React / Vite</text>
-  <text x="691" y="339" fill="#A7D8BD" font-size="12">● project</text>
+    <g class="folder">
+      <path d="M272 198h33l10 10h42v49h-85z"
+            fill="#C9A1F1"/>
+      <path d="M272 208h85v49h-85z"
+            fill="#A77ED4"/>
+      <path d="M280 216h69v32h-69z"
+            fill="#C9A1F1" opacity=".25"/>
+    </g>
 
-  <rect x="794" y="144" width="185" height="220" rx="14" fill="#292039" stroke="#634C80"/>
-  <path d="M843 198h33l10 10h42v49h-85z" fill="#E7C99D"/>
-  <path d="M843 208h85v49h-85z" fill="#D6AC77"/>
-  <text x="886" y="292" fill="#F0DFFF" font-size="18" font-weight="bold">Portfolio</text>
-  <text x="886" y="317" fill="#BDA9D5" font-size="12">My little space</text>
-  <text x="886" y="339" fill="#A7D8BD" font-size="12">● online</text>
+    <text x="311" y="292"
+          fill="#F0DFFF" font-size="18"
+          font-weight="bold">S.I.G.A.</text>
+
+    <text x="311" y="317"
+          fill="#BDA9D5" font-size="12">Flutter / API</text>
+
+    <circle class="status" cx="271" cy="335"
+            r="4" fill="#A7D8BD"/>
+    <text x="320" y="339"
+          fill="#A7D8BD" font-size="12">project</text>
+  </g>
+
+  <!-- MOVIES & MUSICS -->
+  <g class="card">
+    <rect class="card-bg"
+          x="414" y="144" width="175" height="220"
+          rx="14" fill="#292039" stroke="#634C80"/>
+
+    <g class="folder">
+      <path d="M462 198h33l10 10h42v49h-85z"
+            fill="#E6A5D0"/>
+      <path d="M462 208h85v49h-85z"
+            fill="#CC8FBF"/>
+      <path d="M470 216h69v32h-69z"
+            fill="#F1C2E1" opacity=".2"/>
+    </g>
+
+    <text x="501" y="292"
+          fill="#F0DFFF" font-size="16"
+          font-weight="bold">Movies &amp;</text>
+
+    <text x="501" y="312"
+          fill="#F0DFFF" font-size="16"
+          font-weight="bold">Musics</text>
+
+    <text x="501" y="339"
+          fill="#BDA9D5" font-size="12">Web Development</text>
+  </g>
+
+  <!-- NEWBANK -->
+  <g class="card">
+    <rect class="card-bg"
+          x="604" y="144" width="175" height="220"
+          rx="14" fill="#292039" stroke="#634C80"/>
+
+    <g class="folder">
+      <path d="M652 198h33l10 10h42v49h-85z"
+            fill="#A9D6C2"/>
+      <path d="M652 208h85v49h-85z"
+            fill="#7DB7A2"/>
+      <path d="M660 216h69v32h-69z"
+            fill="#C2EBDD" opacity=".2"/>
+    </g>
+
+    <text x="691" y="292"
+          fill="#F0DFFF" font-size="18"
+          font-weight="bold">NewBank</text>
+
+    <text x="691" y="317"
+          fill="#BDA9D5" font-size="12">React / Vite</text>
+
+    <circle class="status" cx="650" cy="335"
+            r="4" fill="#A7D8BD"/>
+    <text x="700" y="339"
+          fill="#A7D8BD" font-size="12">project</text>
+  </g>
+
+  <!-- PORTFOLIO -->
+  <g class="card">
+    <rect class="card-bg"
+          x="794" y="144" width="185" height="220"
+          rx="14" fill="#292039" stroke="#634C80"/>
+
+    <g class="folder">
+      <path d="M843 198h33l10 10h42v49h-85z"
+            fill="#E7C99D"/>
+      <path d="M843 208h85v49h-85z"
+            fill="#D6AC77"/>
+      <path d="M851 216h69v32h-69z"
+            fill="#F7DDB8" opacity=".2"/>
+    </g>
+
+    <text x="886" y="292"
+          fill="#F0DFFF" font-size="18"
+          font-weight="bold">Portfolio</text>
+
+    <text x="886" y="317"
+          fill="#BDA9D5" font-size="12">My little space</text>
+
+    <circle class="status" cx="845" cy="335"
+            r="4" fill="#A7D8BD"/>
+    <text x="895" y="339"
+          fill="#A7D8BD" font-size="12">online</text>
+  </g>
+
 </g>
+
+<!-- BOTTOM STATUS -->
+<rect x="20" y="384" width="960" height="24"
+      rx="6" fill="#241B32" opacity=".95"/>
+
+<text x="35" y="401"
+      font-family="monospace" font-size="12"
+      fill="#BDA9D5">
+  4 items | Emily.exe file system
+</text>
+
+<circle class="status" cx="818" cy="396"
+        r="4" fill="#A8E4C1"/>
+
+<text x="833" y="401"
+      font-family="monospace" font-size="12"
+      fill="#A8E4C1">
+  all systems operational
+</text>
+
 </svg>
