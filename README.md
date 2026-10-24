@@ -118,11 +118,10 @@ console.log("Thanks for visiting my little universe!");
 
 `[ system message ]`
 
+
 <br>
 
 <div align="center">
-
-<img src="./footer.svg" width="100%" alt="Emily.exe - Goodbye Screen" />
-
+  <img src="./footer.svg" width="100%" alt="Emily.exe OS - Goodbye Screen" />
 </div>
 
