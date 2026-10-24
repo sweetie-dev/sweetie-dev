@@ -1,5 +1,7 @@
 
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="425" viewBox="0 0 1000 425">
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="425" viewBox="0 0 1000 425" role="img" aria-labelledby="terminal-title terminal-description">
+<title id="terminal-title">Emily.exe — About Me Terminal</title>
+<desc id="terminal-description">A purple terminal window introduces Emily Nivea, a software developer studying Systems Analysis and Development, passionate about front-end, design, and creative coding.</desc>
 <rect width="1000" height="425" rx="16" fill="#141021"/>
 <rect x="1" y="1" width="998" height="423" rx="16" fill="none" stroke="#604677"/>
 <path d="M16 1h968q15 0 15 15v35H1V16Q1 1 16 1z" fill="#342544"/>
