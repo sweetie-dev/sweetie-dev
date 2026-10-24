@@ -22,8 +22,14 @@
 <circle cx="98" cy="57" r="6" fill="#E99BAE"/><circle cx="120" cy="57" r="6" fill="#F1CE98"/><circle cx="142" cy="57" r="6" fill="#A8D7BF"/>
 <text x="500" y="62" text-anchor="middle" font-family="monospace" font-size="14" fill="#EAD8FA">goodbye.exe — session complete</text>
 <g font-family="monospace"><text x="112" y="112" fill="#A8E4C1" font-size="14">emily@midnight:~$ ./goodbye.exe</text><text x="112" y="151" fill="#E9D1FF" font-size="25" font-weight="bold">thanks for stopping by ♡</text><text x="112" y="179" fill="#C8B3DE" font-size="14">may your next idea become something wonderful.</text><text x="112" y="208" fill="#E7A9D2" font-size="13">saving a little stardust for your next visit...</text><rect x="112" y="224" width="400" height="7" rx="3.5" fill="#433354"/><rect class="bar" x="112" y="224" width="400" height="7" rx="3.5" fill="url(#progress)"/><rect class="cursor" x="524" y="196" width="9" height="15" fill="#D9B7FA"/></g>
-<!-- pixel heart -->
-<g class="heart"><path d="M765 107h12V95h24v12h24V95h24v12h12v24h-12v12h-12v12h-12v12h-12v12h-12v-12h-12v-12h-12v-12h-12v-12h-12v-24h12z" fill="#E8A8D4"/><path d="M783 107h12v12h-12z" fill="#FFE3F2" opacity=".85"/><path d="M795 107h6v12h-6z" fill="#FFE3F2" opacity=".5"/></g>
-<text x="813" y="210" text-anchor="middle" font-family="monospace" font-size="12" fill="#D7B8EE">made with ♡ &amp; code</text>
+<!-- luminous pixel star -->
+<g class="heart">
+  <path d="M813 91h12v24h24v12h24v12h-24v12h-24v24h-12v-24h-24v-12h-24v-12h24v-12h24z" fill="#E9B6F4"/>
+  <path d="M813 103h12v12h-12zM801 127h12v12h-12zM825 127h12v12h-12zM813 139h12v12h-12z" fill="#FFF0FF" opacity=".65"/>
+  <path d="M771 96v14M764 103h14M861 164v14M854 171h14" fill="none" stroke="#CDA6F4" stroke-width="3" stroke-linecap="square"/>
+  <circle cx="867" cy="98" r="3" fill="#F5BDE1"/>
+  <circle cx="764" cy="170" r="3" fill="#C9EBDD"/>
+</g>
+<text x="813" y="210" text-anchor="middle" font-family="monospace" font-size="12" fill="#D7B8EE">made of stars &amp; code</text>
 <rect x="0" y="274" width="1000" height="26" fill="#120E1E"/><circle class="dot" cx="34" cy="287" r="4" fill="#A8E4C1"/><text x="48" y="292" font-family="monospace" font-size="12" fill="#CBB8E1">connection established</text><text x="964" y="292" text-anchor="end" font-family="monospace" font-size="12" fill="#CBB8E1">Emily.exe OS  ✦  see you next commit</text>
 </svg>
