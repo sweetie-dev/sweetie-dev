@@ -1,85 +1,387 @@
 
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="570" viewBox="0 0 1000 570">
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1000" height="570"
+     viewBox="0 0 1000 570"
+     role="img"
+     aria-label="Emily.exe animated desktop">
+
 <defs>
-  <linearGradient id="bg" x2="1" y2="1">
-    <stop stop-color="#100D20"/>
-    <stop offset=".55" stop-color="#25183F"/>
-    <stop offset="1" stop-color="#111024"/>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#100B1D"/>
+    <stop offset="55%" stop-color="#24163E"/>
+    <stop offset="100%" stop-color="#100D20"/>
   </linearGradient>
-  <linearGradient id="panel" x2="0" y2="1">
-    <stop stop-color="#302345"/>
-    <stop offset="1" stop-color="#1B172D"/>
+
+  <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#302345"/>
+    <stop offset="100%" stop-color="#191528"/>
   </linearGradient>
-  <filter id="shadow">
-    <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#080612" flood-opacity=".7"/>
+
+  <radialGradient id="glow">
+    <stop offset="0%" stop-color="#B78AF7" stop-opacity=".55"/>
+    <stop offset="100%" stop-color="#B78AF7" stop-opacity="0"/>
+  </radialGradient>
+
+  <radialGradient id="pinkGlow">
+    <stop offset="0%" stop-color="#EFA4DA" stop-opacity=".38"/>
+    <stop offset="100%" stop-color="#EFA4DA" stop-opacity="0"/>
+  </radialGradient>
+
+  <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#B68AF4"/>
+    <stop offset="50%" stop-color="#F0D8FF"/>
+    <stop offset="100%" stop-color="#B68AF4"/>
+  </linearGradient>
+
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+    <feDropShadow dx="0" dy="12" stdDeviation="17"
+      flood-color="#080612" flood-opacity=".8"/>
   </filter>
+
+  <filter id="softGlow">
+    <feGaussianBlur stdDeviation="7"/>
+  </filter>
+
+  <clipPath id="screenClip">
+    <rect width="1000" height="515" rx="18"/>
+  </clipPath>
+
+  <clipPath id="windowClip">
+    <rect x="186" y="132" width="648" height="317" rx="4"/>
+  </clipPath>
+
+  <style>
+    .star {
+      animation: twinkle 3s ease-in-out infinite alternate;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    .s2 { animation-delay: -1s; }
+    .s3 { animation-delay: -2s; }
+    .s4 { animation-delay: -0.5s; }
+
+    @keyframes twinkle {
+      0% { opacity: .15; transform: scale(.65); }
+      100% { opacity: 1; transform: scale(1.35); }
+    }
+
+    .float {
+      animation: floating 8s ease-in-out infinite alternate;
+    }
+
+    @keyframes floating {
+      from { transform: translate(-20px, 10px); }
+      to { transform: translate(25px, -15px); }
+    }
+
+    .float2 {
+      animation: floating2 11s ease-in-out infinite alternate;
+    }
+
+    @keyframes floating2 {
+      from { transform: translate(20px, -12px); }
+      to { transform: translate(-25px, 18px); }
+    }
+
+    .orbit {
+      transform-origin: 780px 260px;
+      animation: rotateOrbit 36s linear infinite;
+    }
+
+    @keyframes rotateOrbit {
+      to { transform: rotate(360deg); }
+    }
+
+    .cursor {
+      animation: blink 1s steps(1) infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    .online {
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .35; }
+    }
+
+    .titleGlow {
+      animation: titlePulse 4s ease-in-out infinite;
+    }
+
+    @keyframes titlePulse {
+      0%, 100% { opacity: .2; }
+      50% { opacity: .75; }
+    }
+
+    .scan {
+      animation: scanMove 9s linear infinite;
+    }
+
+    @keyframes scanMove {
+      from { transform: translateY(-320px); }
+      to { transform: translateY(350px); }
+    }
+
+    .boot {
+      animation: appear 1.4s ease-out both;
+    }
+
+    .delay1 { animation-delay: .2s; }
+    .delay2 { animation-delay: .5s; }
+    .delay3 { animation-delay: .8s; }
+
+    @keyframes appear {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .iconHover {
+      animation: iconFloat 5s ease-in-out infinite alternate;
+    }
+
+    @keyframes iconFloat {
+      from { transform: translateY(0); }
+      to { transform: translateY(-4px); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+    }
+  </style>
 </defs>
 
+<!-- BACKGROUND -->
 <rect width="1000" height="570" rx="18" fill="url(#bg)"/>
 
-<!-- Stars -->
-<g fill="#E6C8FF" opacity=".65">
-  <circle cx="90" cy="65" r="2"/>
-  <circle cx="235" cy="108" r="1.5"/>
-  <circle cx="470" cy="54" r="2"/>
-  <circle cx="735" cy="84" r="1.5"/>
-  <circle cx="910" cy="165" r="2"/>
-  <circle cx="580" cy="445" r="1.5"/>
-  <circle cx="315" cy="385" r="1.5"/>
-  <circle cx="850" cy="390" r="2"/>
+<g clip-path="url(#screenClip)">
+  <!-- Animated ambient lights -->
+  <circle class="float" cx="730" cy="220" r="280"
+          fill="url(#glow)"/>
+  <circle class="float2" cx="380" cy="390" r="220"
+          fill="url(#pinkGlow)"/>
+
+  <!-- Orbital decoration -->
+  <g class="orbit" opacity=".35">
+    <ellipse cx="780" cy="260" rx="175" ry="105"
+             fill="none" stroke="#CBA9F5"
+             stroke-width="1"
+             stroke-dasharray="4 10"/>
+    <circle cx="955" cy="260" r="5" fill="#F2D6FF"/>
+  </g>
+
+  <!-- Stars -->
+  <g fill="#EAD6FF">
+    <circle class="star" cx="90" cy="65" r="2"/>
+    <circle class="star s2" cx="235" cy="108" r="2"/>
+    <circle class="star s3" cx="470" cy="54" r="2"/>
+    <circle class="star s4" cx="735" cy="84" r="2"/>
+    <circle class="star s2" cx="910" cy="165" r="2"/>
+    <circle class="star s3" cx="580" cy="445" r="2"/>
+    <circle class="star" cx="315" cy="385" r="2"/>
+    <circle class="star s4" cx="850" cy="390" r="2"/>
+    <circle class="star s2" cx="145" cy="480" r="1.5"/>
+    <circle class="star s3" cx="958" cy="70" r="1.5"/>
+    <circle class="star" cx="670" cy="470" r="1.5"/>
+    <circle class="star s4" cx="405" cy="110" r="1.5"/>
+  </g>
+
+  <!-- Sparkles -->
+  <g stroke="#EACDFF" stroke-width="1.5"
+     stroke-linecap="round" opacity=".8">
+    <path class="star" d="M900 60v14M893 67h14"/>
+    <path class="star s2" d="M130 200v12M124 206h12"/>
+    <path class="star s3" d="M570 75v10M565 80h10"/>
+  </g>
 </g>
 
-<circle cx="770" cy="260" r="170" fill="#8D5DBB" opacity=".07"/>
-<circle cx="770" cy="260" r="115" fill="#C8A0FF" opacity=".05"/>
+<!-- DESKTOP ICONS -->
+<g font-family="monospace"
+   font-size="13"
+   text-anchor="middle"
+   fill="#DDD0F2">
 
-<!-- Desktop icons -->
-<g font-family="monospace" font-size="13" text-anchor="middle" fill="#DDD0F2">
-  <rect x="35" y="48" width="78" height="82" rx="12" fill="#FFFFFF" fill-opacity=".06"/>
-  <rect x="56" y="64" width="36" height="27" rx="5" fill="#BFA0F1"/>
-  <rect x="56" y="64" width="36" height="8" rx="3" fill="#E5C9FF"/>
-  <text x="74" y="111">about.exe</text>
+  <g class="iconHover">
+    <rect x="35" y="48" width="78" height="82"
+          rx="12" fill="#FFFFFF" fill-opacity=".06"/>
+    <rect x="56" y="64" width="36" height="27"
+          rx="5" fill="#BFA0F1"/>
+    <rect x="56" y="64" width="36" height="8"
+          rx="3" fill="#E5C9FF"/>
+    <text x="74" y="111">about.exe</text>
+  </g>
 
-  <rect x="35" y="151" width="78" height="82" rx="12" fill="#FFFFFF" fill-opacity=".06"/>
-  <path d="M54 174h15l5 5h21v25H54z" fill="#D8B4FE"/>
-  <text x="74" y="218">projects</text>
+  <g class="iconHover" style="animation-delay:-1s">
+    <rect x="35" y="151" width="78" height="82"
+          rx="12" fill="#FFFFFF" fill-opacity=".06"/>
+    <path d="M54 174h15l5 5h21v25H54z"
+          fill="#D8B4FE"/>
+    <text x="74" y="218">projects</text>
+  </g>
 
-  <rect x="35" y="254" width="78" height="82" rx="12" fill="#FFFFFF" fill-opacity=".06"/>
-  <rect x="55" y="269" width="39" height="28" rx="5" fill="#382750" stroke="#C8A6F0"/>
-  <text x="74" y="288" fill="#DCC3FF">&gt;_</text>
-  <text x="74" y="321">terminal</text>
+  <g class="iconHover" style="animation-delay:-2s">
+    <rect x="35" y="254" width="78" height="82"
+          rx="12" fill="#FFFFFF" fill-opacity=".06"/>
+    <rect x="55" y="269" width="39" height="28"
+          rx="5" fill="#382750" stroke="#C8A6F0"/>
+    <text x="74" y="288" fill="#DCC3FF">&gt;_</text>
+    <text x="74" y="321">terminal</text>
+  </g>
 
-  <rect x="35" y="357" width="78" height="82" rx="12" fill="#FFFFFF" fill-opacity=".06"/>
-  <path d="M74 373c-18-17-33 9 0 29 33-20 18-46 0-29z" fill="#EAA5CE"/>
-  <text x="74" y="424">favorites</text>
+  <g class="iconHover" style="animation-delay:-3s">
+    <rect x="35" y="357" width="78" height="82"
+          rx="12" fill="#FFFFFF" fill-opacity=".06"/>
+    <path d="M74 373c-18-17-33 9 0 29 33-20 18-46 0-29z"
+          fill="#EAA5CE"/>
+    <text x="74" y="424">favorites</text>
+  </g>
 </g>
 
-<!-- Main window -->
+<!-- MAIN WINDOW -->
 <g filter="url(#shadow)">
-  <rect x="185" y="85" width="650" height="365" rx="14" fill="url(#panel)" stroke="#73568F"/>
-  <path d="M199 85h622q14 0 14 14v32H185V99q0-14 14-14z" fill="#3C2A55"/>
+  <rect x="185" y="85" width="650" height="365"
+        rx="14" fill="url(#panel)"
+        stroke="#8D6AAA" stroke-width="1.3"/>
+
+  <path d="M199 85h622q14 0 14 14v32H185V99q0-14 14-14z"
+        fill="#3C2A55"/>
+
   <circle cx="208" cy="109" r="6" fill="#E994AE"/>
   <circle cx="229" cy="109" r="6" fill="#F0CC91"/>
   <circle cx="250" cy="109" r="6" fill="#A7D7BE"/>
-  <text x="510" y="114" text-anchor="middle" font-family="monospace" font-size="14" fill="#E8D8F8">welcome.exe — Emily OS</text>
+
+  <text x="510" y="114" text-anchor="middle"
+        font-family="monospace" font-size="14"
+        fill="#E8D8F8">welcome.exe — Emily OS</text>
 </g>
 
+<!-- SCAN LIGHT -->
+<g clip-path="url(#windowClip)" opacity=".14">
+  <rect class="scan" x="186" y="132"
+        width="648" height="35"
+        fill="#DCC0FF" filter="url(#softGlow)"/>
+</g>
+
+<!-- TERMINAL CONTENT -->
 <g font-family="monospace">
-  <text x="225" y="175" fill="#A8DCC5" font-size="14">$ initializing emily.exe ...</text>
-  <text x="225" y="204" fill="#C5AEDF" font-size="13">[ OK ] loading creative universe</text>
-  <text x="225" y="230" fill="#C5AEDF" font-size="13">[ OK ] developer profile found</text>
-  <text x="225" y="281" fill="#E8CFFF" font-size="42" font-weight="bold">hello, i'm emily ♡</text>
-  <text x="225" y="314" fill="#CDBBE2" font-size="17">a little universe made of code.</text>
-  <text x="225" y="354" fill="#E9A9D7" font-size="14">✦ developer  /  dreamer  /  creator</text>
-  <rect x="225" y="378" width="210" height="39" rx="8" fill="#A77CD2"/>
-  <text x="330" y="403" text-anchor="middle" fill="#1C132A" font-size="14" font-weight="bold">SYSTEM ONLINE ♡</text>
+
+  <g class="boot">
+    <text x="225" y="175" fill="#A8DCC5" font-size="14">
+      $ initializing emily.exe ...
+    </text>
+  </g>
+
+  <g class="boot delay1">
+    <text x="225" y="204" fill="#C5AEDF" font-size="13">
+      [ OK ] loading creative universe
+    </text>
+  </g>
+
+  <g class="boot delay2">
+    <text x="225" y="230" fill="#C5AEDF" font-size="13">
+      [ OK ] developer profile found
+    </text>
+  </g>
+
+  <!-- Glowing title -->
+  <text class="titleGlow"
+        x="225" y="281"
+        fill="#E4B7FF"
+        filter="url(#softGlow)"
+        font-size="42"
+        font-weight="bold">
+    hello, i'm emily ♡
+  </text>
+
+  <text x="225" y="281"
+        fill="#E8CFFF"
+        font-size="42"
+        font-weight="bold">
+    hello, i'm emily ♡
+  </text>
+
+  <text x="225" y="314"
+        fill="#CDBBE2" font-size="17">
+    a little universe made of code.
+  </text>
+
+  <text x="225" y="354"
+        fill="#E9A9D7" font-size="14">
+    ✦ developer / dreamer / creator
+  </text>
+
+  <!-- Status button -->
+  <rect x="225" y="378"
+        width="210" height="39"
+        rx="8" fill="#A77CD2"/>
+
+  <circle class="online"
+          cx="246" cy="397"
+          r="5" fill="#A8F2C6"/>
+
+  <text x="335" y="403"
+        text-anchor="middle"
+        fill="#1C132A"
+        font-size="14"
+        font-weight="bold">
+    SYSTEM ONLINE ♡
+  </text>
+
+  <!-- Blinking cursor -->
+  <text x="460" y="404"
+        fill="#C8A5F5" font-size="18">
+    &gt;
+  </text>
+  <rect class="cursor"
+        x="476" y="389"
+        width="10" height="18"
+        fill="#D9B7FA"/>
 </g>
 
-<!-- Taskbar -->
-<rect x="0" y="515" width="1000" height="55" fill="#141020" fill-opacity=".96"/>
-<rect x="18" y="524" width="39" height="36" rx="10" fill="#3E2B57"/>
-<text x="37" y="549" text-anchor="middle" fill="#E8CEFF" font-size="21">✦</text>
-<text x="77" y="547" font-family="monospace" fill="#DCC9F1" font-size="15">Emily.exe OS</text>
-<rect x="230" y="524" width="112" height="36" rx="8" fill="#3A2B4D"/>
-<text x="286" y="547" font-family="monospace" text-anchor="middle" fill="#E9D8FF" font-size="13">welcome</text>
-<text x="835" y="547" font-family="monospace" fill="#DCC9F1" font-size="14">♡  ✦  online</text>
+<!-- TASKBAR -->
+<rect x="0" y="515" width="1000" height="55"
+      fill="#141020" fill-opacity=".96"/>
+
+<line x1="0" y1="515" x2="1000" y2="515"
+      stroke="#6E4F8C" stroke-opacity=".65"/>
+
+<rect x="18" y="524" width="39" height="36"
+      rx="10" fill="#3E2B57"/>
+
+<text x="37" y="549"
+      text-anchor="middle"
+      fill="#E8CEFF" font-size="21">✦</text>
+
+<text x="77" y="547"
+      font-family="monospace"
+      fill="#DCC9F1" font-size="15">
+  Emily.exe OS
+</text>
+
+<rect x="230" y="524"
+      width="112" height="36"
+      rx="8" fill="#3A2B4D"/>
+
+<text x="286" y="547"
+      font-family="monospace"
+      text-anchor="middle"
+      fill="#E9D8FF" font-size="13">
+  welcome
+</text>
+
+<circle class="online"
+        cx="830" cy="542"
+        r="5" fill="#A8E4C1"/>
+
+<text x="845" y="547"
+      font-family="monospace"
+      fill="#DCC9F1" font-size="14">
+  ♡ ✦ online
+</text>
+
 </svg>
