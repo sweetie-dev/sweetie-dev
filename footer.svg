@@ -1,1 +1,29 @@
-
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="300" viewBox="0 0 1000 300" role="img" aria-label="Emily.exe goodbye footer">
+<defs>
+ <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#100D20"/><stop offset=".6" stop-color="#25183F"/><stop offset="1" stop-color="#130E22"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#C69AFF" stop-opacity=".35"/><stop offset="1" stop-color="#C69AFF" stop-opacity="0"/></radialGradient>
+ <linearGradient id="progress"><stop stop-color="#A78BD8"/><stop offset=".55" stop-color="#E9A6D6"/><stop offset="1" stop-color="#B7E8CF"/></linearGradient>
+ <clipPath id="clip"><rect width="1000" height="300" rx="18"/></clipPath>
+ <style>
+ .star{animation:twinkle 3s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:center}.star:nth-child(2n){animation-delay:-1.3s}.star:nth-child(3n){animation-delay:-2.1s}
+ @keyframes twinkle{from{opacity:.2;transform:scale(.65)}to{opacity:1;transform:scale(1.25)}}
+ .halo{animation:drift 9s ease-in-out infinite alternate}@keyframes drift{to{transform:translate(35px,-12px)}}
+ .heart{animation:beat 2.7s ease-in-out infinite;transform-origin:813px 132px}@keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+ .cursor{animation:blink 1s steps(1) infinite}@keyframes blink{50%{opacity:0}}
+ .dot{animation:pulse 2s ease-in-out infinite}@keyframes pulse{50%{opacity:.3}}
+ .bar{animation:load 5s ease-in-out infinite alternate;transform-origin:285px 213px}@keyframes load{from{transform:scaleX(.55)}to{transform:scaleX(1)}}
+ @media(prefers-reduced-motion:reduce){*{animation:none!important}}
+ </style>
+</defs>
+<rect width="1000" height="300" rx="18" fill="url(#bg)"/>
+<g clip-path="url(#clip)"><circle class="halo" cx="800" cy="125" r="225" fill="url(#glow)"/><g fill="#E6C9FF"><circle class="star" cx="65" cy="55" r="2"/><circle class="star" cx="160" cy="240" r="1.5"/><circle class="star" cx="380" cy="45" r="2"/><circle class="star" cx="690" cy="55" r="1.5"/><circle class="star" cx="945" cy="88" r="2"/><circle class="star" cx="930" cy="245" r="1.5"/></g></g>
+<rect x="75" y="37" width="850" height="220" rx="14" fill="#1B172C" stroke="#80629D"/>
+<path d="M89 37H911Q925 37 925 51V75H75V51Q75 37 89 37Z" fill="#3B2A51"/>
+<circle cx="98" cy="57" r="6" fill="#E99BAE"/><circle cx="120" cy="57" r="6" fill="#F1CE98"/><circle cx="142" cy="57" r="6" fill="#A8D7BF"/>
+<text x="500" y="62" text-anchor="middle" font-family="monospace" font-size="14" fill="#EAD8FA">goodbye.exe — session complete</text>
+<g font-family="monospace"><text x="112" y="112" fill="#A8E4C1" font-size="14">emily@midnight:~$ ./goodbye.exe</text><text x="112" y="151" fill="#E9D1FF" font-size="25" font-weight="bold">thanks for stopping by ♡</text><text x="112" y="179" fill="#C8B3DE" font-size="14">may your next idea become something wonderful.</text><text x="112" y="208" fill="#E7A9D2" font-size="13">saving a little stardust for your next visit...</text><rect x="112" y="224" width="400" height="7" rx="3.5" fill="#433354"/><rect class="bar" x="112" y="224" width="400" height="7" rx="3.5" fill="url(#progress)"/><rect class="cursor" x="524" y="196" width="9" height="15" fill="#D9B7FA"/></g>
+<!-- pixel heart -->
+<g class="heart" fill="#E8A8D4"><path d="M771 106h18v-9h18v9h18v-9h18v9h18v18h-9v18h-18v18h-18v18h-18v-18h-18v-18h-18v-18h-9v-18h18z"/><path d="M789 115h18v9h-18z" fill="#FFE3F2" opacity=".8"/></g>
+<text x="813" y="210" text-anchor="middle" font-family="monospace" font-size="12" fill="#D7B8EE">made with ♡ &amp; code</text>
+<rect x="0" y="274" width="1000" height="26" fill="#120E1E"/><circle class="dot" cx="34" cy="287" r="4" fill="#A8E4C1"/><text x="48" y="292" font-family="monospace" font-size="12" fill="#CBB8E1">connection established</text><text x="964" y="292" text-anchor="end" font-family="monospace" font-size="12" fill="#CBB8E1">Emily.exe OS  ✦  see you next commit</text>
+</svg>
