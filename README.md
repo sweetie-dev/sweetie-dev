@@ -1,7 +1,7 @@
 
 <div align="center">
 
-<img src="./assets/desktop.svg" width="100%" alt="Emily.exe OS - Desktop" />
+<img src="./desktop.svg" width="100%" alt="Emily.exe OS - Desktop" />
 
 <br>
 
@@ -16,13 +16,13 @@
 
 <br>
 
-<img src="./assets/terminal.svg" width="100%" alt="About Emily - Terminal" />
+<img src="./terminal.svg" width="100%" alt="About Emily - Terminal" />
 
 <br>
 
 ## ✦ explorer / my-projects
 
-<img src="./assets/projects.svg" width="100%" alt="Emily's Project Explorer" />
+<img src="./projects.svg" width="100%" alt="Emily's Project Explorer" />
 
 <div align="center">
 
@@ -41,11 +41,33 @@
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=html,css,js,ts,react,vite,nodejs,php,python,java&theme=dark" />
+### 01. front-end.exe
 
-<br>
+<img src="https://skillicons.dev/icons?i=html,css,js,ts,react,vite,bootstrap&theme=dark" />
 
-<img src="https://skillicons.dev/icons?i=flutter,dart,mysql,postgres,supabase,git,github,vscode,wordpress,figma&theme=dark" />
+<br><br>
+
+### 02. back-end.exe
+
+<img src="https://skillicons.dev/icons?i=nodejs,express,php,ruby,rails,python,java&theme=dark" />
+
+<br><br>
+
+### 03. database.exe
+
+<img src="https://skillicons.dev/icons?i=mysql,postgres,mongodb,sqlite,supabase&theme=dark" />
+
+<br><br>
+
+### 04. mobile-and-creative.exe
+
+<img src="https://skillicons.dev/icons?i=flutter,dart,godot&theme=dark" />
+
+<br><br>
+
+### 05. dev-tools.exe
+
+<img src="https://skillicons.dev/icons?i=git,github,vscode,wordpress,figma,postman,netlify&theme=dark" />
 
 </div>
 
@@ -55,10 +77,23 @@
 
 ```javascript
 const emily = {
-  education: "Software Development - ADS",
-  focus: ["Front-end", "UI/UX", "Web Development"],
+  education: "Systems Analysis and Development - ADS",
+
+  focus: [
+    "Front-end Development",
+    "Back-end Development",
+    "UI/UX",
+    "Web Development"
+  ],
+
   currentlyLearning: "A little bit of everything",
-  loves: ["Creative projects", "Music", "Technology"],
+
+  loves: [
+    "Creative projects",
+    "Music",
+    "Technology"
+  ],
+
   status: "Always learning and building something new ♡"
 };
 
@@ -74,6 +109,7 @@ console.log("Thanks for visiting my little universe!");
 <a href="https://thenivea.netlify.app">
   <img src="https://img.shields.io/badge/PORTFOLIO-24162F?style=for-the-badge&logo=vercel&logoColor=D9B8FF" />
 </a>
+
 <a href="https://github.com/sweetie-dev">
   <img src="https://img.shields.io/badge/GITHUB-24162F?style=for-the-badge&logo=github&logoColor=D9B8FF" />
 </a>
